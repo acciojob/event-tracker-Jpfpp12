@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import CalendarView from './CalendarView.js';
 import FilterButtons from './FilterButtons.js';
 import moment from 'moment';
+import './App.css'; 
 
 function App() {
   const [events, setEvents] = useState([]);
