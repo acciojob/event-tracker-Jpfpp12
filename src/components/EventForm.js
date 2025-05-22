@@ -28,7 +28,13 @@ function EventForm({ popupInfo, onSave, onDelete }) {
       <div></div>
       <div></div>
       <div></div>
-      <button className="btn mm-popup__btn mm-popup__btn--info" onClick={handleSave}>Save</button>
+      <button
+        className="btn mm-popup__btn mm-popup__btn--info"
+        data-cy="save-event"
+        onClick={handleSave}
+      >
+        Save
+      </button>
       <button
         className="btn mm-popup__btn mm-popup__btn--danger"
         onClick={() => onDelete(event.id)}
