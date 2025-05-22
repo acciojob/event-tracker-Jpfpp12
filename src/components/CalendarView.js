@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { Calendar, momentLocalizer } from 'react-big-calendar'; 
+import BigCalendar from 'react-big-calendar';
 import Popup from 'reactjs-popup';
 import moment from 'moment';
 import EventForm from './EventForm.js';
 
-
-const localizer = momentLocalizer(moment);
+const localizer = BigCalendar.momentLocalizer(moment);
 
 function CalendarView({ events, setEvents, allEvents }) {
   const [popupInfo, setPopupInfo] = useState(null);
@@ -45,7 +44,7 @@ function CalendarView({ events, setEvents, allEvents }) {
 
   return (
     <>
-      <Calendar
+      <BigCalendar
         localizer={localizer}
         events={events}
         startAccessor="start"
