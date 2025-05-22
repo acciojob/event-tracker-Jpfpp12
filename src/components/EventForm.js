@@ -28,7 +28,6 @@ function EventForm({ popupInfo, onSave, onDelete }) {
           <div></div>
           <div></div>
           <div></div>
-          {/* Save button is always the 4th child */}
           <button
             className="btn mm-popup__btn mm-popup__btn--info"
             data-cy="save-event"
@@ -36,9 +35,8 @@ function EventForm({ popupInfo, onSave, onDelete }) {
           >
             Save
           </button>
-          {/* Delete button is always present but hidden unless editing */}
           <button
-            className="mm-popup__btn mm-popup__btn--danger"
+            className="mm-popup__btn--danger"
             style={{ display: isEdit ? 'inline-block' : 'none' }}
             onClick={() => onDelete(event.id)}
             data-cy="delete-event"
