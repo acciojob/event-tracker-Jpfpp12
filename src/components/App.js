@@ -18,6 +18,7 @@ function App() {
   return (
     <div className="app-container">
       <FilterButtons setFilter={setFilter} />
+      <button className="btn" data-cy="add-event">Add Event</button>
       <CalendarView events={filterEvents()} setEvents={setEvents} allEvents={events} />
     </div>
   );
