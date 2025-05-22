@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Calendar, momentLocalizer } from 'react-big-calendar';
+import BigCalendar from 'react-big-calendar';
+const { Calendar, momentLocalizer } = BigCalendar;
 import Popup from 'reactjs-popup';
 import moment from 'moment';
 import EventForm from './EventForm.js';
