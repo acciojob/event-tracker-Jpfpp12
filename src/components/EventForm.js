@@ -20,32 +20,34 @@ function EventForm({ popupInfo, onSave, onDelete }) {
   };
 
   return (
-<div className="mm-popup">
-  <div className="mm-popup__box">
-    <input placeholder="Event Title" value={title} onChange={e => setTitle(e.target.value)} />
-    <input placeholder="Event Location" value={location} onChange={e => setLocation(e.target.value)} />
-    <div className="mm-popup__box__footer__right-space">
-      <div></div>
-      <div></div>
-      <div></div>
-      <button
-        className="btn mm-popup__btn mm-popup__btn--info"
-        data-cy="save-event"
-        onClick={handleSave}
-      >
-        Save
-      </button>
-      <button
-        className="btn mm-popup__btn mm-popup__btn--danger"
-        onClick={() => onDelete(event.id)}
-        style={{ display: isEdit ? 'inline-block' : 'none' }}
-      >
-        Delete
-      </button>
+    <div className="mm-popup">
+      <div className="mm-popup__box">
+        <input placeholder="Event Title" value={title} onChange={e => setTitle(e.target.value)} />
+        <input placeholder="Event Location" value={location} onChange={e => setLocation(e.target.value)} />
+        <div className="mm-popup__box__footer__right-space">
+          <div></div>
+          <div></div>
+          <div></div>
+          {/* Save button is always the 4th child */}
+          <button
+            className="btn mm-popup__btn mm-popup__btn--info"
+            data-cy="save-event"
+            onClick={handleSave}
+          >
+            Save
+          </button>
+          {/* Delete button is always present but hidden unless editing */}
+          <button
+            className="mm-popup__btn mm-popup__btn--danger"
+            style={{ display: isEdit ? 'inline-block' : 'none' }}
+            onClick={() => onDelete(event.id)}
+            data-cy="delete-event"
+          >
+            Delete
+          </button>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-
   );
 }
 
