@@ -41,6 +41,7 @@ function EventForm({ popupInfo, onSave, onDelete }) {
             Delete
           </button>
         </div>
+        
       </div>
     </div>
   );
