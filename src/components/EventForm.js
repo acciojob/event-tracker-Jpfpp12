@@ -25,9 +25,6 @@ function EventForm({ popupInfo, onSave, onDelete }) {
         <input placeholder="Event Title" value={title} onChange={e => setTitle(e.target.value)} />
         <input placeholder="Event Location" value={location} onChange={e => setLocation(e.target.value)} />
         <div className="mm-popup__box__footer__right-space">
-          <div></div>
-          <div></div>
-          <div></div>
           <button
             className="btn mm-popup__btn mm-popup__btn--info"
             data-cy="save-event"
@@ -36,7 +33,7 @@ function EventForm({ popupInfo, onSave, onDelete }) {
             Save
           </button>
           <button
-            className="mm-popup__btn--danger"
+            className="btn mm-popup__btn mm-popup__btn--danger"
             style={{ display: isEdit ? 'inline-block' : 'none' }}
             onClick={() => onDelete(event.id)}
             data-cy="delete-event"
