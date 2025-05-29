@@ -1,5 +1,129 @@
+
 .app-container {
   min-height: 700px;
   height: 100vh;
+  background: #f7f9fb;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  padding: 32px 0;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.btn {
+  padding: 10px 28px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  background: #e3e7ed;
+  color: #333;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.filter-btn-all {
+  background: #e3e7ed;
+}
+.filter-btn-past {
+  background: #de6987;
+  color: #fff;
+}
+.filter-btn-upcoming {
+  background: #8cbd4c;
+  color: #fff;
+}
+.btn:hover {
+  background: #cfd8e3;
+}
+.filter-btn-past:hover {
+  background: #c94c6d;
+}
+.filter-btn-upcoming:hover {
+  background: #6fa13a;
+}
+
+.mm-popup {
+  background: rgba(0,0,0,0.25);
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.mm-popup__box {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.12);
+  padding: 32px 28px 24px 28px;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.mm-popup__box input {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+.mm-popup__box__footer__right-space {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.mm-popup__btn {
+  padding: 8px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  margin-left: 8px;
+  cursor: pointer;
+}
+.mm-popup__btn--info {
+  background: #8cbd4c;
+  color: #fff;
+}
+.mm-popup__btn--danger {
+  background: #de6987;
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.rbc-calendar {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  padding: 18px;
+}
+.rbc-toolbar {
+  margin-bottom: 18px;
+}
+.rbc-event {
+  border-radius: 6px;
+  font-size: 0.98rem;
+  padding: 2px 8px;
+  border: none;
+}
+.rbc-event-content {
+  color: #fff;
+}
+.rbc-today {
+  background: #f3f7fa !important;
+}
+.rbc-selected {
+  box-shadow: 0 0 0 2px #8cbd4c;
 }
 
